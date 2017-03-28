@@ -1,0 +1,129 @@
+html, body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+     }
+     #map {
+       height: 100%;
+     }
+#floating-panel {
+ position: absolute;
+ width: 300px;
+ top: 10%;
+ left: 15%;
+ z-index: 5;
+ background-color: #fff;
+ padding: 1px;
+ border: 1px solid #999;
+ text-align: center;
+ font-family: 'Roboto','sans-serif';
+ line-height: 30px;
+ padding-left: 1px;
+ border-color:darkorange;
+}
+#start,#end{
+    border-color:darkorange;
+}
+/**{outline: 1px solid pink}
+.navbar{
+   background: white;
+}*/
+
+
+.navbar-inverse {
+   /* background-color: white; 
+   /* border-color: #080808; */
+}
+
+#logo{
+   height: 100%;
+   width: 40%;
+}
+
+.icon-info{
+   color: yellow;
+   padding: 5%;
+   padding-top: 5%;
+   font-size: 35px;
+}
+#info{
+   height: 100px;
+   width: 100px;
+   background-color: rgba(31,31,31,0.9);
+   -webkit-transition:opacity 0.2s;
+   opacity: 0;
+}
+
+.icon-info:hover #info{
+   opacity: 1;
+}
+
+#home-sec {
+width: 40%;
+ position: absolute;
+ top: 10%;
+ left: 5%;
+ z-index: 5;
+ background-color: #fff;
+ padding: 5px;
+ border: 1px solid #999;
+ text-align: center;
+ font-family: 'Roboto','sans-serif';
+ line-height: 30px;
+ padding-left: 10px;
+}
+.tooltiptext {
+   visibility: hidden;
+   width: 200px;
+    height:100px;
+   background-color: $white-hunt;
+    text-align: center;
+   color:$black-hunt;
+   margin-top: 30px;
+   padding: 8px 8px;
+    font-size: 12px;
+    font-family: $font-Rb;
+    right: 65px; 
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+.tooltiptext {
+   visibility: hidden;
+   width: 200px;
+height:100px;
+   background-color: $white-hunt;
+text-align: center;
+   color:$black-hunt;
+   margin-top: 30px;
+   padding: 8px 8px;
+font-size: 12px;
+font-family: $font-Rb;
+right: 65px; 
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+#car-list-container{
+    
+position: absolute; 
+  z-index: 1000; /* The z-index should be higher than Google Maps */
+    top: 20%;
+ left: 15%;
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+  background: white;
+  height: auto;
+  opacity: 0.9; /* Set the opacity for a slightly transparent Google Form */ 
+  color: black;
+  border-color:darkorange;
+}
+.btnCantidad{
+    border-color:darkorange; !important
+    background: darkorange;!important
+    color:azure;
+    width: 250px;
+}
+

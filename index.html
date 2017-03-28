@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="src/css/style.css">
+   <link rel="stylesheet" href="iconos/style.css">
+   <link rel="stylesheet" href="swat/dist/sweetalert.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Examen Herramientas Productividad</title>
+<!--REQUIRED STYLE SHEETS-->
+</head>
+<body onload="init()">
+   <!-- ------------------------------------------------------------------ MAPA -->
+   
+   <div id="map"></div>
+   <!-- ---------------------------------------------------------- SEGUNDA VISTA -->
+   <div class="navbar navbar-default navbar-fixed-top" >
+       <div class="container">
+           <div class="navbar-header page-scroll col-xs-10">
+               <a class="navbar-brand page-scroll" href="#page-top"><img class="img-responsive" id="logo" height="1px" src="src/img/logo-gris.jpg" alt=""></a>
+           </div>
+           <div id="imagen">
+               <i class="fa fa-info-circle" aria-hidden="true" id="icon"><span class="tooltiptext"><img src="docs/logo-peach.jpn"  width="80px" class="d-inline-block align-top" alt="">Puedes compartir tu viaje con amigos y cobrar el costo equitativamente </span></i>   
+           </div>
+
+       </div>
+     
+   </div><!--END NAV SECTION -->
+       <div id="floating-panel">
+           <b>Start: </b>
+           <select id="start" onchange="calcRoute();">
+              <option value="arica">Arica</option>
+              <option value="iquique">Iquique</option>
+              <option value="antofagasta">Antofagasta</option>
+              <option value="serena">La Serena</option>
+              <option value="valparaiso">Valparaiso</option>
+              <option value="santiago">Santiago</option>
+              <option value="rancagua">Rancagua</option>
+              <option value="talca">Talca</option>
+              <option value="concepcion">Concepción</option>
+              <option value="valdivia">Valdivia</option>
+              <option value="puerto">Puerto Montt</option>
+              <option value="coyhaique">Coyhaique</option>
+              <option value="punta">Punta Arenas</option>
+           </select>
+           <br>
+           <b>End: </b>
+           <select id="end" onchange="calcRoute();">
+              <option value="arica">Arica</option>
+              <option value="iquique">Iquique</option>
+              <option value="antofagasta">Antofagasta</option>
+              <option value="serena">La Serena</option>
+              <option value="valparaiso">Valparaiso</option>
+              <option value="santiago">Santiago</option>
+              <option value="rancagua">Rancagua</option>
+              <option value="talca">Talca</option>
+              <option value="concepcion">Concepción</option>
+              <option value="valdivia">Valdivia</option>
+              <option value="puerto">Puerto Montt</option>
+              <option value="coyhaique">Coyhaique</option>
+              <option value="punta">Punta Arenas</option>
+              <div id="map"></div>
+              
+           </select>
+    </div>
+      
+      <div id="car-list-container">
+           <div class="row" >
+	            <div class="col-xs-12">
+                   <div class="form-group">
+                       <div class="col-sm-2 col-xs-2">
+                          <label class="radio-inline">
+                                <input id="male" type="radio" name="genderRadios" value="M" onclick="validacion('genderRadios')">
+                            </label>
+                        </div>
+                        <div class= "col-sm-3 col-xs-3">
+                          <img src="src/img/moto.png" id="carImgPickUp" alt="" class="img-responsive">
+                        </div>
+                        <div class= "col-sm-7 col-xs-7">
+                          <span id="carNamePickUp">Motocicleta</span><br><small id="carSeatsPickUp">maximo 2 pasajeros</small>
+                        </div>                  
+                    </div>
+                    <div class="form-group">
+                       <div class="col-sm-2 col-xs-2">
+                          <label class="radio-inline">
+                                <input id="male" type="radio" name="genderRadios" value="M" onclick="validacion('genderRadios')">
+                            </label>
+                        </div>
+                        <div class= "col-sm-3 col-xs-3">
+                          <img src="src/img/moto.png" id="carImgPickUp" alt="" class="img-responsive">
+                        </div>
+                        <div class= "col-sm-7 col-xs-7">
+                          <span id="carNamePickUp">Motocicleta</span><br><small id="carSeatsPickUp">maximo 2 pasajeros</small>
+                        </div>                  
+                    </div>
+                    <div class="form-group">
+                       <div class="col-sm-2 col-xs-2">
+                          <label class="radio-inline">
+                                <input id="male" type="radio" name="genderRadios" value="M" onclick="validacion('genderRadios')">
+                            </label>
+                        </div>
+                        <div class= "col-sm-3 col-xs-3">
+                          <img src="src/img/moto.png" id="carImgPickUp" alt="" class="img-responsive">
+                        </div>
+                        <div class= "col-sm-7 col-xs-7">
+                          <span id="carNamePickUp">Motocicleta</span><br><small id="carSeatsPickUp">maximo 2 pasajeros</small>
+                        </div>                  
+                    </div>
+                    <div class="form-group">
+                       <div class="col-sm-2 col-xs-2">
+                          <label class="radio-inline">
+                                <input id="male" type="radio" name="genderRadios" value="M" onclick="validacion('genderRadios')">
+                            </label>
+                        </div>
+                        <div class= "col-sm-3 col-xs-3">
+                          <img src="src/img/moto.png" id="carImgPickUp" alt="" class="img-responsive">
+                        </div>
+                        <div class= "col-sm-7 col-xs-7">
+                          <span id="carNamePickUp">Motocicleta</span><br><small id="carSeatsPickUp">maximo 2 pasajeros</small>
+                        </div>                  
+                    </div>
+                    <div class="form-group">
+	                        <label for="txtName" class="control-label col-xs-9">Cantidad de Pasajeros:</label>
+	                        <div class="col-xs-3 input-box">
+	                            <input id="max"  type="text" class="form-control" placeholder="" onkeyup="validateNumPerson(event)">
+	                            <span class="help-block" style="display: none;">#max</span>
+	                        </div>
+	                    </div>
+                    <!--Botón Request Lyft-->    
+                    <div class="text-center">
+                       <a href="#"><button type="button" class="btnCantidad" id="btnRequestLyft">Cantidad de carros</button></a>  
+                    </div>
+               </div>
+           </div>
+        </div>
+    <script src=""></script>
+    <script src="src/js/custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwnHXl4W0_Cet50EfxXcYATnmTSBbESX8&callback=initMap" async defer></script>
+    
+    
+  </body>
+</html>
