@@ -43,3 +43,4 @@ gulp.task('sweetalertjs', function(){
 });
 
 gulp.task('default', ['images', 'style', 'script', 'jquery', 'sweetalertcss', 'sweetalertjs', 'fonts']);
+
